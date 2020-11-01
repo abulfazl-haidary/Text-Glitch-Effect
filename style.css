@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'yesteryear';
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #21295c;
+}
+
+body .glitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .glitch p {
+  text-transform: capitalize;
+  font-size: calc(4.6rem - 1rem);
+  color: aqua;
+  padding: 0 .3rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+body .glitch ::before, body .glitch ::after {
+  content: attr(data-text);
+  padding: 0 .3rem;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  opacity: .8;
+}
+
+body .glitch ::before {
+  z-index: -1;
+  color: #dadada;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
+  -webkit-animation: glitch 1s ease infinite;
+          animation: glitch 1s ease infinite;
+}
+
+body .glitch ::after {
+  z-index: -2;
+  color: #ec2d2d;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
+  -webkit-animation: glitch 10s ease-in-out infinite;
+          animation: glitch 10s ease-in-out infinite;
+}
+
+@-webkit-keyframes glitch {
+  0%, 30%, 60%, 90%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  15% {
+    -webkit-transform: translate(-1%, -1%);
+            transform: translate(-1%, -1%);
+  }
+  45% {
+    -webkit-transform: translate(1%, 1%);
+            transform: translate(1%, 1%);
+  }
+  75% {
+    -webkit-transform: translate(-1%, -1%);
+            transform: translate(-1%, -1%);
+  }
+}
+
+@keyframes glitch {
+  0%, 30%, 60%, 90%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  15% {
+    -webkit-transform: translate(-1%, -1%);
+            transform: translate(-1%, -1%);
+  }
+  45% {
+    -webkit-transform: translate(1%, 1%);
+            transform: translate(1%, 1%);
+  }
+  75% {
+    -webkit-transform: translate(-1%, -1%);
+            transform: translate(-1%, -1%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
